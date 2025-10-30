@@ -190,56 +190,6 @@ BoroBeacon/
 └── README.md                   # This README file
 ```
 
-## ⚙️ Configuration
-
-### Environment Variables
-
-Both the `Frontend` and `Backend` applications rely on environment variables for sensitive configurations, primarily related to Firebase.
-
-**Frontend (`Frontend/.env`):**
-
-| Variable                       | Description                                       | Default | Required |
-| :----------------------------- | :------------------------------------------------ | :------ | :------- |
-| `EXPO_PUBLIC_FIREBASE_API_KEY` | Your Firebase project's API Key.                  |         | Yes      |
-| `EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN` | Your Firebase project's Auth Domain.              |         | Yes      |
-| `EXPO_PUBLIC_FIREBASE_PROJECT_ID` | Your Firebase project's unique ID.                |         | Yes      |
-| `EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET` | Your Firebase project's Storage Bucket.           |         | Yes      |
-| `EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID` | Your Firebase project's Messaging Sender ID.      |         | Yes      |
-| `EXPO_PUBLIC_FIREBASE_APP_ID`  | Your Firebase project's Web App ID.               |         | Yes      |
-| `EXPO_PUBLIC_FIREBASE_MEASUREMENT_ID` | Your Firebase project's Measurement ID (for Analytics). |         | No       |
-
-**Backend (`Backend/.env`):**
-
-| Variable                  | Description                                            | Default | Required |
-| :------------------------ | :----------------------------------------------------- | :------ | :------- |
-| `FIREBASE_PRIVATE_KEY_ID` | Private key ID for your Firebase Service Account.      |         | Yes      |
-| `FIREBASE_PRIVATE_KEY`    | Full private key string for your Firebase Service Account (including `\n`). |         | Yes      |
-| `FIREBASE_PROJECT_ID`     | Your Firebase project's unique ID.                     |         | Yes      |
-| `FIREBASE_CLIENT_EMAIL`   | Client email for your Firebase Service Account.        |         | Yes      |
-| `PORT`                    | The port the backend server will listen on.            | `3000`  | No       |
-
-### Firebase Security Rules
-
-Ensure your Firestore security rules are configured to allow appropriate read/write access based on user authentication and roles. Example (adjust as needed for your specific data model):
-
-```firestore
-rules_version = '2';
-service cloud.firestore {
-  match /databases/{database}/documents {
-    // Allow authenticated users to read and write their own data
-    match /users/{userId} {
-      allow read, write: if request.auth.uid == userId;
-    }
-    // Allow authenticated users to create help requests, read nearby requests
-    match /requests/{requestId} {
-      allow create: if request.auth != null;
-      allow read: if request.auth != null; // Refine this with GeoFire queries in client
-      allow update, delete: if request.auth.uid == resource.data.requesterId;
-    }
-    // Consider rules for GeoFire location data separately
-  }
-}
-```
 
 ## 🔧 Development
 

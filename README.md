@@ -1,4 +1,4 @@
-# 🚀 BoroBeacon
+# 💠 BoroBeacon
 
 <div align="center">
 
@@ -162,32 +162,40 @@ Ensure you have the following installed on your system:
 
 ```
 BoroBeacon/
-├── Backend/                    # Node.js / Firebase Functions backend service
-│   ├── src/                    # Backend source code
-│   │   ├── config/             # Configuration files (e.g., Firebase admin setup)
-│   │   ├── controllers/        # Logic for API endpoints
-│   │   ├── routes/             # API route definitions
-│   │   ├── services/           # Business logic and database interactions
-│   │   └── index.ts            # Backend entry point
-│   ├── .env.example            # Backend environment variables example
-│   ├── package.json            # Backend dependencies and scripts
-│   └── tsconfig.json           # TypeScript configuration for backend
-├── Frontend/                   # React Native mobile application
-│   ├── src/                    # Mobile app source code
-│   │   ├── assets/             # Images, fonts, etc.
-│   │   ├── components/         # Reusable UI components
-│   │   ├── hooks/              # Custom React Native hooks
-│   │   ├── navigation/         # Navigation setup (React Navigation)
-│   │   ├── screens/            # Application screens/pages
-│   │   ├── services/           # Firebase/GeoFire client-side interactions
-│   │   ├── utils/              # Utility functions
-│   │   └── App.tsx             # Main application component
-│   ├── app.json                # Expo/React Native app configuration
-│   ├── .env.example            # Frontend environment variables example
-│   ├── package.json            # Frontend dependencies and scripts
-│   └── tsconfig.json           # TypeScript configuration for frontend
-├── .gitignore                  # Git ignore rules
-└── README.md                   # This README file
+├── Backend/                           # Firebase backend root
+│   ├── functions/                   # Firebase Cloud Functions (Node.js)
+│   ├── database-debug.log
+│   ├── firebase-debug.log
+│   ├── firebase.json                # Firebase project configuration
+│   ├── firestore-debug.log
+│   ├── package-lock.json
+│   └── package.json                 # Backend dependencies
+│
+├── Frontend/                          # React Native (Expo) mobile application
+│   ├── app/                         # Expo Router file-based routing
+│   │   ├── (auth)/                  # Route group for authentication screens
+│   │   ├── (tabs)/                  # Route group for main app tab navigation
+│   │   └── _layout.tsx              # Main layout for the app directory
+│   ├── assets/
+│   ├── components/                  # Reusable UI components
+│   ├── constants/
+│   ├── hooks/                       # Custom React hooks
+│   ├── scripts/
+│   ├── app.json                     # Expo app configuration file
+│   ├── babel.config.js
+│   ├── eslint.config.js
+│   ├── expo-env.d.ts
+│   ├── firebaseConfig.js            # Firebase client configuration
+│   ├── global.css                   # Global styles (likely for NativeWind)
+│   ├── main
+│   ├── metro.config.js
+│   ├── nativewind-env.d.ts
+│   ├── package-lock.json
+│   ├── package.json                 # Frontend dependencies
+│   ├── tailwind.config.js           # Tailwind CSS (NativeWind) config
+│   └── tsconfig.json                # TypeScript configuration
+│
+└── README.md                          # This README file
 ```
 
 

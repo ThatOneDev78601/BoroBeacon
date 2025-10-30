@@ -1,5 +1,5 @@
 # 💠 BoroBeacon
-
+![BoroBeacon Banner](./Frontend/assets/images/bannerWide.jpg)
 <div align="center">
 
 <!-- TODO: Add project logo -->

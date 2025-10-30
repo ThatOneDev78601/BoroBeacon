@@ -1,26 +1,16 @@
-<table>
-  <tr>
-    <td width="50%">
-      <!-- Using an HTML img tag for better control inside the table -->
-      <img src="./Frontend/assets/images/bannerWide.jpg" alt="BoroBeacon Banner" width="100%">
-    </td>
-    <td width="50%" valign="top" align="center">
-      <!-- Converted Markdown header to HTML <h1> -->
-      <h1>💠 BoroBeacon</h1>
-      
-      <!-- Badges -->
-      <a href="https://github.com/ThatOneDev78601/BoroBeacon/stargazers"><img src="https://img.shields.io/github/stars/ThatOneDev78601/BoroBeacon?style=for-the-badge" alt="GitHub stars"></a>
-      <a href="https://github.com/ThatOneDev78601/BoroBeacon/network"><img src="https://img.shields.io/github/forks/ThatOneDev78601/BoroBeacon?style=for-the-badge" alt="GitHub forks"></a>
-      <a href="https://github.com/ThatOneDev78601/BoroBeacon/issues"><img src="https://img.shields.io/github/issues/ThatOneDev78601/BoroBeacon?style=for-the-badge" alt="GitHub issues"></a>
-      <a href="LICENSE"><img src="https://img.shields.io/github/license/ThatOneDev78601/BoroBeacon?style=for-the-badge" alt="GitHub license"></a>
-      
-      <br><br>
-      
-      <!-- Description -->
-      <strong>A real-time dispatch system connecting people in need with nearby community helpers through a geolocating mobile app.</strong>
-    </td>
-  </tr>
-</table>
+# 💠 BoroBeacon
+![BoroBeacon Banner](./Frontend/assets/images/bannerWide.jpg)
+<div align="center">
+
+<!-- TODO: Add project logo -->
+
+[![GitHub stars](https://img.shields.io/github/stars/ThatOneDev78601/BoroBeacon?style=for-the-badge)](https://github.com/ThatOneDev78601/BoroBeacon/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/ThatOneDev78601/BoroBeacon?style=for-the-badge)](https://github.com/ThatOneDev78601/BoroBeacon/network)
+[![GitHub issues](https://img.shields.io/github/issues/ThatOneDev78601/BoroBeacon?style=for-the-badge)](https://github.com/ThatOneDev78601/BoroBeacon/issues)
+[![GitHub license](https://img.shields.io/github/license/ThatOneDev78601/BoroBeacon?style=for-the-badge)](LICENSE) <!-- TODO: Add LICENSE file -->
+
+**A real-time dispatch system connecting people in need with nearby community helpers through a geolocating mobile app.**
+
 <!-- TODO: Add live demo link (e.g., TestFlight/App Store/Google Play link) -->
 <!-- TODO: Add documentation link if external documentation exists -->
 

@@ -9,16 +9,9 @@ import { initializeAuth, getReactNativePersistence, connectAuthEmulator } from '
 import Constants from 'expo-constants'; 
 import { Platform } from 'react-native'; 
 
-const firebaseConfig = {
-  apiKey: "AIzaSyA0yllTJbb_afrFFSHhKiQ0DUbRib64Hus",
-  authDomain: "minutehero-de06a.firebaseapp.com",
-  projectId: "minutehero-de06a",
-  databaseURL: "https://minutehero-de06a.firebaseio.com",
-  storageBucket: "minutehero-de06a.firebasestorage.app",
-  messagingSenderId: "663947508353",
-  appId: "1:663947508353:web:066d6b687a8ee69701eb80",
-  measurementId: "G-9FCEJ43Q15", 
-};
+const firebaseConfig = /*
+FIREBASE CONFIG HERE
+*/
 let app = firebase.initializeApp(firebaseConfig); 
 
 
@@ -99,3 +92,4 @@ if (__DEV__) {
 
 
 export { auth, db, rtdb, GeoPoint, firebase, functions };
+

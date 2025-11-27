@@ -6,6 +6,7 @@
 [![GitHub forks](https://img.shields.io/github/forks/ThatOneDev78601/BoroBeacon?style=for-the-badge)](https://github.com/ThatOneDev78601/BoroBeacon/network)
 [![GitHub issues](https://img.shields.io/github/issues/ThatOneDev78601/BoroBeacon?style=for-the-badge)](https://github.com/ThatOneDev78601/BoroBeacon/issues)
 [![GitHub license](https://img.shields.io/github/license/ThatOneDev78601/BoroBeacon?style=for-the-badge)](LICENSE)
+<br />
  **A real-time dispatch system connecting people in need with nearby community helpers through a geolocating mobile app.**
 </div>
 

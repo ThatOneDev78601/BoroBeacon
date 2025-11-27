@@ -5,10 +5,10 @@
 [![GitHub stars](https://img.shields.io/github/stars/ThatOneDev78601/BoroBeacon?style=for-the-badge)](https://github.com/ThatOneDev78601/BoroBeacon/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/ThatOneDev78601/BoroBeacon?style=for-the-badge)](https://github.com/ThatOneDev78601/BoroBeacon/network)
 [![GitHub issues](https://img.shields.io/github/issues/ThatOneDev78601/BoroBeacon?style=for-the-badge)](https://github.com/ThatOneDev78601/BoroBeacon/issues)
-[![GitHub license](https://img.shields.io/github/license/ThatOneDev78601/BoroBeacon?style=for-the-badge)](LICENSE) **A real-time dispatch system connecting people in need with nearby community helpers through a geolocating mobile app.**
+[![GitHub license](https://img.shields.io/github/license/ThatOneDev78601/BoroBeacon?style=for-the-badge)](LICENSE)
 
 </div>
-
+ **A real-time dispatch system connecting people in need with nearby community helpers through a geolocating mobile app.**
 ## 📲 Live Demo & Download
 
 Experience BoroBeacon instantly in your browser or download the app to your Android device:
@@ -25,7 +25,9 @@ BoroBeacon is a compassionate mobile application designed to foster community su
 -   🎯 **Real-time Help Requests:** Users can instantly post requests for assistance, visible to nearby community helpers.
 -   📍 **Proximity-Based Matching:** Utilizes GeoFire to efficiently connect those in need with the closest available helpers based on real-time location data.
 -   🤝 **Volunteer Dispatch System:** Helpers can view active requests within a defined radius and accept dispatch roles to provide aid.
--   💬 **Secure Communication:** Facilitates direct and secure communication between requesters and helpers. -   🔐 **User Authentication:** Secure user registration and login for both requesters and helpers. -   📱 **Cross-Platform Mobile App:** Built with React Native for a native feel on both iOS and Android.
+-   💬 **Secure Communication:** Facilitates direct and secure communication between requesters and helpers. <!-- Inferred feature -->
+-   🔐 **User Authentication:** Secure user registration and login for both requesters and helpers. <!-- Inferred feature from Firebase usage -->
+-   📱 **Cross-Platform Mobile App:** Built with React Native for a native feel on both iOS and Android.
 
 ## 🖥️ Screenshots
 
@@ -34,7 +36,9 @@ BoroBeacon is a compassionate mobile application designed to foster community su
 **Frontend (Mobile App):**
 [![React Native](https://img.shields.io/badge/React%20Native-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://reactnative.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Expo](https://img.shields.io/badge/Expo-1B1F2D?style=for-the-badge&logo=expo&logoColor=white)](https://expo.dev/) **Backend & Database:**
+[![Expo](https://img.shields.io/badge/Expo-1B1F2D?style=for-the-badge&logo=expo&logoColor=white)](https://expo.dev/) <!-- Inferred if using Expo for RN -->
+
+**Backend & Database:**
 [![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
 [![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com/)
 [![Firestore](https://img.shields.io/badge/Firestore-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com/docs/firestore)
@@ -64,37 +68,37 @@ Ensure you have the following installed on your system:
 -   **React Native Development Environment**:
     -   **Android**: Java Development Kit (JDK), Android Studio with Android SDK and emulator setup.
     -   **iOS**: Xcode with Command Line Tools and iOS simulator setup (macOS only).
-    -   **Refer to the [React Native Environment Setup Guide](https://reactnative.dev/docs/environment-setup) for detailed instructions.**
+    -   Refer to the [React Native Environment Setup Guide](https://reactnative.dev/docs/environment-setup) for detailed instructions.
 -   **Firebase Project**: An active Firebase project with Firestore enabled.
 
 ### Installation
 
 1.  **Clone the repository**
     ```bash
-    git clone [https://github.com/ThatOneDev78601/BoroBeacon.git](https://github.com/ThatOneDev78601/BoroBeacon.git)
+    git clone https://github.com/ThatOneDev78601/BoroBeacon.git
     cd BoroBeacon
     ```
 
 2.  **Firebase Project Setup**
-    * Go to the [Firebase Console](https://console.firebase.google.com/).
-    * Create a new project.
-    * Enable **Firestore Database** in Native mode.
-    * **Authentication**: Set up preferred authentication methods (e.g., Email/Password).
-    * **Project Settings**: Add a new web app to your Firebase project to get your configuration details.
+    *   Go to the [Firebase Console](https://console.firebase.google.com/).
+    *   Create a new project.
+    *   Enable **Firestore Database** in Native mode.
+    *   **Authentication**: Set up preferred authentication methods (e.g., Email/Password).
+    *   **Project Settings**: Add a new web app to your Firebase project to get your configuration details.
 
 3.  **Frontend (Mobile App) Setup**
 
-    * Navigate to the `Frontend` directory:
+    *   Navigate to the `Frontend` directory:
         ```bash
         cd Frontend
         ```
-    * Install dependencies:
+    *   Install dependencies:
         ```bash
         npm install
         # or
         yarn install
         ```
-    * Configure environment variables:
+    *   Configure environment variables:
         Create a `.env` file in the `Frontend` directory based on `.env.example` (if present) or manually add your Firebase configuration:
         ```env
         # Frontend/.env
@@ -108,7 +112,7 @@ Ensure you have the following installed on your system:
         ```
         Replace placeholders with your actual Firebase project configuration.
 
-    * Start the React Native development server:
+    *   Start the React Native development server:
         ```bash
         npx expo start
         # or
@@ -118,17 +122,17 @@ Ensure you have the following installed on your system:
 
 4.  **Backend (API Service) Setup**
 
-    * Open a new terminal and navigate to the `Backend` directory:
+    *   Open a new terminal and navigate to the `Backend` directory:
         ```bash
         cd Backend
         ```
-    * Install dependencies:
+    *   Install dependencies:
         ```bash
         npm install
         # or
         yarn install
         ```
-    * Configure environment variables:
+    *   Configure environment variables:
         Create a `.env` file in the `Backend` directory based on `.env.example` (if present) or manually add your Firebase configuration. This might include credentials for Admin SDK:
         ```env
         # Backend/.env
@@ -141,7 +145,7 @@ Ensure you have the following installed on your system:
         ```
         For `FIREBASE_PRIVATE_KEY` and `FIREBASE_CLIENT_EMAIL`, you'll need to generate a private key for your Firebase project service account in the Firebase Console (Project settings > Service accounts > Generate new private key).
 
-    * Start the Backend server:
+    *   Start the Backend server:
         ```bash
         npm start
         # or

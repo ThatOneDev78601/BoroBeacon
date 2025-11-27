@@ -149,4 +149,153 @@ Ensure you have the following installed on your system:
         ```
         The backend service will likely run on `http://localhost:3000` (or the port defined in your `.env`).
 
+
 ## 📁 Project Structure
+
+```
+BoroBeacon/
+├── Backend/                           # Firebase backend root
+│   ├── functions/                   # Firebase Cloud Functions (Node.js)
+│   ├── database-debug.log
+│   ├── firebase-debug.log
+│   ├── firebase.json                # Firebase project configuration
+│   ├── firestore-debug.log
+│   ├── package-lock.json
+│   └── package.json                 # Backend dependencies
+│
+├── Frontend/                          # React Native (Expo) mobile application
+│   ├── app/                         # Expo Router file-based routing
+│   │   ├── (auth)/                  # Route group for authentication screens
+│   │   ├── (tabs)/                  # Route group for main app tab navigation
+│   │   └── _layout.tsx              # Main layout for the app directory
+│   ├── assets/
+│   ├── components/                  # Reusable UI components
+│   ├── constants/
+│   ├── hooks/                       # Custom React hooks
+│   ├── scripts/
+│   ├── app.json                     # Expo app configuration file
+│   ├── babel.config.js
+│   ├── eslint.config.js
+│   ├── expo-env.d.ts
+│   ├── firebaseConfig.js            # Firebase client configuration
+│   ├── global.css                   # Global styles (likely for NativeWind)
+│   ├── main
+│   ├── metro.config.js
+│   ├── nativewind-env.d.ts
+│   ├── package-lock.json
+│   ├── package.json                 # Frontend dependencies
+│   ├── tailwind.config.js           # Tailwind CSS (NativeWind) config
+│   └── tsconfig.json                # TypeScript configuration
+│
+└── README.md                          # This README file
+```
+
+
+## 🔧 Development
+
+### Available Scripts
+
+Each sub-project (`Frontend` and `Backend`) has its own set of development scripts defined in their `package.json` files.
+
+#### `Frontend` Scripts:
+
+| Command           | Description                                                 |
+| :---------------- | :---------------------------------------------------------- |
+| `npm start`       | Starts the Expo development server.                         |
+| `npm run android` | Runs the app on a connected Android device or emulator.     |
+| `npm run ios`     | Runs the app on a connected iOS device or simulator.        |
+| `npm test`        | Runs unit tests (if configured, likely Jest/React Native Testing Library). <!-- TODO: Confirm testing framework and update --> |
+| `npm run eject`   | Ejects from Expo (use with caution, if custom native modules are needed). |
+
+#### `Backend` Scripts:
+
+| Command        | Description                                  |
+| :------------- | :------------------------------------------- |
+| `npm start`    | Compiles and starts the Node.js server.      |
+| `npm run dev`  | Starts the Node.js server with hot-reloading (e.g., using `nodemon` or `ts-node-dev`). <!-- Inferred --> |
+| `npm run build` | Compiles TypeScript files to JavaScript.     |
+| `npm test`     | Runs backend unit/integration tests. <!-- TODO: Confirm testing framework and update --> |
+
+### Development Workflow
+
+1.  Start the `Backend` service in one terminal.
+2.  Start the `Frontend` development server in another terminal.
+3.  Ensure your chosen emulator/simulator or physical device is running.
+4.  Develop features in both `Frontend` and `Backend` as needed. The `Frontend` will typically reload automatically on changes.
+
+## 🧪 Testing
+
+Both `Frontend` and `Backend` components should have their own testing setups.
+
+```bash
+# To run frontend tests:
+cd Frontend
+npm test
+
+# To run backend tests:
+cd Backend
+npm test
+```
+
+<!-- TODO: Specify actual testing frameworks (e.g., Jest, React Native Testing Library for frontend, Jest/Mocha/Chai for backend) and provide example test commands if available. -->
+
+## 🚀 Deployment
+
+### Mobile Application Deployment
+
+The `Frontend` React Native application can be deployed to app stores (Google Play Store, Apple App Store).
+
+-   **Expo Build**: If using Expo, you can build your app for production using `eas build`.
+    ```bash
+    cd Frontend
+    eas build --platform android # or ios
+    ```
+-   **React Native CLI**: If ejected or using the bare React Native workflow, follow platform-specific guides to build and deploy your app.
+
+### Backend Service Deployment
+
+The `Backend` service, interacting with Firebase, is ideal for serverless deployment or a containerized environment.
+
+-   **Firebase Cloud Functions**: If the `Backend` logic can be structured as serverless functions, Firebase Cloud Functions would be a natural fit, providing seamless integration with Firestore and other Firebase services.
+-   **Cloud Run/Other Serverless**: The Node.js service could also be containerized and deployed to services like Google Cloud Run, AWS Fargate, or Azure Container Apps for scalable, serverless execution.
+-   **Traditional Hosting**: For a persistent server, deploy to a VM or managed service like Google App Engine, Heroku, etc.
+
+<!-- TODO: Add specific deployment instructions based on detected CI/CD or platform configurations. -->
+
+## 🤝 Contributing
+
+We welcome contributions to BoroBeacon! To get started, please:
+
+1.  Fork the repository.
+2.  Create a new branch for your feature or bug fix (`git checkout -b feature/your-feature-name`).
+3.  Make your changes and ensure they are well-tested.
+4.  Commit your changes (`git commit -m 'feat: Add new feature'`).
+5.  Push to your branch (`git push origin feature/your-feature-name`).
+6.  Open a Pull Request to the `main` branch of this repository.
+
+Please see our [Contributing Guide](CONTRIBUTING.md) for more detailed information. <!-- TODO: Create CONTRIBUTING.md -->
+
+## 📄 License
+
+This project is licensed under the [LICENSE_NAME](LICENSE) - see the LICENSE file for details. <!-- TODO: Add LICENSE file (e.g., MIT, Apache 2.0) -->
+
+## 🙏 Acknowledgments
+
+-   [React Native](https://reactnative.dev/) - For building the cross-platform mobile application.
+-   [Firebase](https://firebase.google.com/) - For the powerful backend services including Authentication and Firestore.
+-   [GeoFire](https://github.com/firebase/geofire-js) - For enabling real-time, location-based queries with Firestore.
+-   [Expo](https://expo.dev/) - For simplifying React Native development (if used).
+
+## 📞 Support & Contact
+
+-   🐛 Issues: [GitHub Issues](https://github.com/ThatOneDev78601/BoroBeacon/issues)
+
+---
+
+<div align="center">
+
+**⭐ Star this repo if you find it helpful!**
+
+Made with ❤️ by [ThatOneDev78601](https://github.com/ThatOneDev78601)
+
+</div>
